@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro">
+    <title>IMC</title>
+    <link rel="stylesheet" href="estilos-IMC.css">
+</head>
+<body>
+
+    <main class="main">
+
+        <div class="contenido-titulo">
+    
+            <h1 class="titulo">Calculo del IMC de los Usuarios</h1>
+        </div>
+        <hr>
+        
+        <table class="contenedor">
+            <tr class="descripcion">
+                <td class="info-nombre">Nombre</td>
+                <td class="info-peso">Peso</td>
+                <td class="info-altura">Altura</td>
+                <td class="info-imc">IMC</td>
+            </tr>
+            <tr class="paciente">
+                <td class="info-nombre">Maria</td>
+                <td class="info-peso">80</td>
+                <td class="info-altura">1.65</td>
+                <td class="info-imc">0</td>
+            </tr>
+            <tr class="paciente">
+                <td class="info-nombre">Jose</td>
+                <td class="info-peso">70</td>
+                <td class="info-altura">1.80</td>
+                <td class="info-imc">0</td>
+            </tr>
+            <tr class="paciente">
+                <td class="info-nombre">Jhon</td>
+                <td class="info-peso">80</td>
+                <td class="info-altura">1.85</td>
+                <td class="info-imc">0</td>
+            </tr>
+            <tr class="paciente">
+                <td class="info-nombre">karen</td>
+                <td class="info-peso">75</td>
+                <td class="info-altura">1.50</td>
+                <td class="info-imc">0</td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <section class="formulario">
+            <div class="grupos">
+                <h3>Nombre:</h3>
+                <input
+                type="text"
+                placeholder="Ingresa el nombre a aqui"
+                id="nombre"
+                autocomplete="off"
+                aria-required="true"
+                >
+
+            </div>
+
+            <div class="grupos">
+                <h3>Peso:</h3>
+                <input
+                type="text"
+                placeholder="Ingresa el peso a aqui"
+                id="peso"
+                autocomplete="off"
+                aria-required="true"
+                >
+
+            </div>
+
+            <div class="grupos">
+                <h3>Altura:</h3>
+                <input
+                type="text"
+                placeholder="Ingresa la altura a aqui"
+                aria-required="true"
+                id="altura"
+                autocomplete="off"
+                >
+
+            </div>
+
+        </section>
+
+        <button id="boton">Enviar</button>
+
+    </main>
+    <script src="IMC.js"></script>
+</body>
+</html>

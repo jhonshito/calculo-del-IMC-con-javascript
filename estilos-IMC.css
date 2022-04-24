@@ -1,0 +1,127 @@
+
+.main{
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contenido-titulo{
+    width: 100%;
+}
+
+.titulo{
+    text-align: center;
+    font-weight: 100;
+    font-family: 'Crimson Pro', serif;
+    font-size: 40px;
+}
+
+.contenedor{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-collapse: collapse;
+    border: 1px solid black;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.contenedor td{
+    border: 1px solid;
+    padding: 15px 55px;
+}
+
+.contenedor tr:hover{
+    background-color: silver;
+}
+
+.descripcion td{
+    background-color: dodgerblue;
+    opacity: 0.8;
+    padding: 15px 55px;
+    font-weight: bold;
+}
+
+
+/* aqui va el codigo css del formulario */
+
+.formulario{
+    display: flex;
+    justify-content: center;
+}
+
+.formulario div{
+    margin: 0px 2px;
+    margin-bottom: 20px;
+}
+
+.formulario h3{
+    font-weight: 100;
+    font-size: 20px;
+    font-family: 'Crimson Pro', serif;
+    margin-left: 30%;
+}
+
+.formulario input{
+    padding: 15px 2px;
+    font-size: 16px;
+    border:  1px solid rgb(43, 134, 238);
+    background-color: rgb(191, 213, 238);
+}
+
+.formulario input:active{
+    border: 1px solid rgb(191, 213, 238);
+}
+
+.main button{
+    padding: 10px 108px;
+    margin-left: 35%;
+    font-size: 1em;
+    font-weight: 50;
+    background-color: dodgerblue;
+    border: 1px solid dodgerblue;
+    opacity: 0.9;
+}
+
+.main button:hover{
+    background-color: rgb(191, 213, 238);
+    color: black;
+    border: rgb(191, 213, 238);
+    transition: 100ms;
+}
+
+
+/* aqui va el css reposive */
+
+@media screen and (max-width: 567px) {
+
+    .main{
+        width: 100%;
+    }
+
+    .contenedor td{
+        padding: 10px 20px;
+    }
+
+    .formulario{
+        display: inline-block;
+        /* margin-left: 17%; */
+        margin-top: 10px;
+    }
+
+    .main button{
+        margin-left: 0%;
+        margin-top: 15px;
+        padding-left: 70px;
+    }
+}
+
+@media screen and (max-width: 930px){
+    .main {
+        width: 100%;
+    }
+
+    /* .formulario{
+        margin-left: -60px;
+    } */
+}
