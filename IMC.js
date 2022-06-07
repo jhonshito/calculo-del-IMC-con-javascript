@@ -1,53 +1,38 @@
 
-const pacientes = document.querySelectorAll('.paciente');
-
-// console.log(pacinetes)
-
-for(let i = 0; i < pacientes.length; i++) {
-    let paciente = pacientes[i];
-
-const tdPeso = paciente.querySelector('.info-peso')
-const tdAltura = paciente.querySelector('.info-altura');
-const tdImc = paciente.querySelector('.info-imc');
-
-// console.log(tdMaria.textContent);
-// console.log(tdAltura.textContent);
-// console.log(tdImc.textContent);
-
-
-let imc = tdPeso.textContent / (tdAltura.textContent * tdAltura.textContent);
-
-tdImc.textContent = imc.toFixed(2);
-}
-
-
+// seleccionando el formulario y el boton
 const nombre = document.getElementById('nombre');
 const peso = document.getElementById('peso');
 const altura = document.getElementById('altura');
 const boton = document.getElementById('boton');
 
-// console.log(boton);
-
 const tabla = document.querySelector('.contenedor');
 
+// evento del boton
 boton.addEventListener('click', (e) => {
-    // console.log('siiiiuuu');
     e.preventDefault()
     
+    const formulario = document.querySelector('form')
+
+// creando las etiquetas tr y td
     let pacientesTr = document.createElement('tr');
     let nombreTd = document.createElement('td');
     let pesoTd = document.createElement('td');
     let alturaTd = document.createElement('td');
     let imcTd = document.createElement('td');
+
     
     
+    
+// agregando los valores a la etiquetas creadas
     nombreTd.textContent = nombre.value;
     pesoTd.textContent = peso.value;
     alturaTd.textContent= altura.value;
-    imcTd.textContent = peso.value / (altura.value * altura.value);
+    imcTd.textContent = peso.value / (altura.value * altura.value).toFixed(3);
+    
 
 
     
+// si hay algun error en lo ingresado por el usuario
     if (pesoTd.textContent > 500){
 
         imcTd.textContent = 'Error'
@@ -72,11 +57,14 @@ boton.addEventListener('click', (e) => {
         pacientesTr.style.backgroundColor = '#e91f41'
     }
 
+
+// agregando las etiquetas creadas al tr y a la tabla
     pacientesTr.appendChild(nombreTd);
     pacientesTr.appendChild(pesoTd);
     pacientesTr.appendChild(alturaTd);
     pacientesTr.appendChild(imcTd);
 
     tabla.appendChild(pacientesTr);
-
+    formulario.reset();
+    
 })

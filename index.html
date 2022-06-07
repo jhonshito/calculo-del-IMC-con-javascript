@@ -12,12 +12,14 @@
 
     <main class="main">
 
+        <!-- titulo -->
         <div class="contenido-titulo">
     
             <h1 class="titulo">Calculo del IMC de los Usuarios</h1>
         </div>
         <hr>
         
+        <!-- contenedor de los usuarios -->
         <table class="contenedor">
             <tr class="descripcion">
                 <td class="info-nombre">Nombre</td>
@@ -53,15 +55,18 @@
 
         <hr>
 
-        <section class="formulario">
+        <!-- formulario -->
+        <section>
+
+            <form class="formulario">
+                
             <div class="grupos">
                 <h3>Nombre:</h3>
                 <input
                 type="text"
                 placeholder="Ingresa el nombre a aqui"
                 id="nombre"
-                autocomplete="off"
-                aria-required="true"
+                required="required"
                 >
 
             </div>
@@ -72,8 +77,7 @@
                 type="text"
                 placeholder="Ingresa el peso a aqui"
                 id="peso"
-                autocomplete="off"
-                aria-required="true"
+                required="required"
                 >
 
             </div>
@@ -83,18 +87,20 @@
                 <input
                 type="text"
                 placeholder="Ingresa la altura a aqui"
-                aria-required="true"
+                required="required"
                 id="altura"
-                autocomplete="off"
                 >
 
             </div>
 
+        </form>
+
         </section>
 
-        <button id="boton">Enviar</button>
+        <button type="submit" id="boton">Enviar</button>
 
     </main>
     <script src="IMC.js"></script>
+    <script src="pacientesFijos.js"></script>
 </body>
 </html>
