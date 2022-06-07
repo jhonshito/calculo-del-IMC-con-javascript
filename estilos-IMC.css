@@ -125,3 +125,14 @@
         margin-left: -60px;
     } */
 }
+
+/* estilo del scrollbar del body */
+body::-webkit-scrollbar{
+    width: 7px;
+    height: 30px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: dodgerblue;
+    border-radius: 10px;
+}
